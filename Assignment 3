@@ -1,0 +1,54 @@
+/*********************
+ * Chrischael Jean-Louis
+ * cs 151 040
+ * Assignment 3
+ * 11/1/17
+ * Prof Reid
+**********************/
+#include<iostream>
+#include<sstream>
+#include<string>
+using namespace std;
+
+float Average(float x,float y,float z)
+{
+ float grd;
+ grd = (x+y+z)/3;
+ return grd;
+}
+string lettergrade(float grd)
+{
+  if (grd >= 97)
+   return "A+";
+else if (grd < 97 && grd >= 93)
+ return "A";
+else if (grd <= 92.9 && grd >= 90)
+  return "A-";
+else if (grd <= 89.9 && grd >= 87)
+  return "B+";
+else if ( grd <= 86.9 && grd >=83)
+  return "B";
+else if (grd <= 82.9 && grd >=80)
+ return "B-";
+else if (grd <= 79.9 && grd >=76)
+  return "C+";
+else if ( grd <= 75.9 && grd >=70)
+  return "C";
+else if (grd <= 69.9 && grd >=67)
+  return "D+";
+else if (grd <= 66.9 && grd >=63)
+  return "D";
+else if ( grd <= 62.9 && grd >=60)
+  return "D-";
+else
+  return "F";
+}
+int main()
+{
+  int x,y,z;
+  cout << "Enter three numbers:"<<endl;
+    cin >> x>>y>>z;
+  cout<< "Your letter grade is "<< lettergrade(Average(x,y,z));
+  return 0;
+}
+ 
