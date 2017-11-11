@@ -1,0 +1,92 @@
+/***************
+ * chrischael jean-louis
+ * cs 151
+ *Midterm Project/Calculator
+ * Prod Reid
+ * 11/7/2017
+ **************/
+ 
+ #include<iostream>
+ #include<cmath>
+ #include<stdlib.h>
+ using namespace std;
+
+void options(){
+  cout<< "select an option"<<endl;
+  cout<< "Addition"<<endl;
+  cout << "Subtraction"<<endl;
+  cout << "Multiplication"<<endl;
+  cout << "Division"<<endl;
+  cout << "Quit"<<endl;
+}
+void Addition(){
+  int a,b;
+  cout << "you chose addition, Input two numbers\n";
+  cin >> a>>b;
+  cout << a+b<<endl;
+  
+}
+void subtraction(){
+  int a,b;
+  cout << "you chose subtraction,  Input two numbers\n";
+  cin >> a>>b;
+  cout << a-b<<endl;
+}
+void multiplication(){
+  int a,b;
+  cout << "you chose multiplication,  Input two numbers\n";
+  cin >> a>>b;
+  cout << a*b<<endl;
+}
+void division(){
+  int a,b;
+  cout << "You chose division, Input two numbers. Second number cannot be 0\n";
+  cin >> a>>b;
+   while (b == 0){
+   cout<< "this is undefined, choose your second number again\n";
+ cin >> b;
+}
+ cout << a/b<<endl;
+}
+void clrscr(){
+   cout << string(2, '\n');
+}
+int main(){
+  options();
+   string choice;
+while(choice != "Quit"){
+  getline(cin, choice);
+   if (choice == "Addition"){
+     Addition();
+     clrscr();
+     options();
+   }
+   else if (choice == "Quit"){
+     break;
+   }
+   if (choice == "Subtraction"){
+    subtraction();
+     clrscr();
+    options();
+   }
+    else if(choice == "Quit"){
+      break;
+  }
+    if (choice == "Multiplication"){
+    multiplication();
+    clrscr();
+    options();
+    }
+    else if(choice == "Quit"){
+      break;
+  }
+   if (choice == "Division"){
+    division();
+    clrscr();
+    options();
+   }
+    else if(choice == "Quit"){
+      break;
+    }
+  }
+}
