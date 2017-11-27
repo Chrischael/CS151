@@ -1,0 +1,73 @@
+/***************
+ * Chrischael Jean-Louis
+ * CS151
+ * examn 3 
+ * Prof Reid
+ * 11/25/17
+*****************/
+1.
+char initial(a){
+  char b;
+}
+2.
+int i;
+i = 1;
+while (i<1)
+{
+  cout << "Why?";
+  i++;
+}
+3.
+int n,i,m;
+cin >> n;
+for (i=1;i<=n;)
+{
+  m=i*i;
+  cout << m <<"\n";
+  i++;
+}
+4.
+  char str[4]={'A','D','E','R'};
+cout << str[1];
+cout << str[2];
+cout << str[0];
+cout << str[3]<<endl;
+cout << str[3];
+cout << str[2];
+cout << str[0];
+cout << str[1];
+5.
+string str;
+getline(cin,str);
+string name;
+name = n;
+name = string(str.rbegin(),str.rend());
+cout << str << name;
+6.
+for(i=1;i<=n;i++)
+{
+  if(n%i==0)
+  {
+    cout << i<<endl;
+  }
+}
+7.
+string word;
+cin >> word;
+while (!(word >="a") && (word <="z"))
+{
+  cout << "enter again";
+cin >> word;
+}
+step|n|i|i<n|j|c|j<n|j+=1|c+=1|display
+1   |2|1|
+2   |2|1|T  |
+3   |2|1|T  |1|
+4   |2|1|T  |1|'A'|
+5   |2|1|T  |1|'A'|F|
+6   |2|1|T  |1|'A'|F|2|
+7   |2|1|T  |1|'A'|F|2|'A'+=1|
+8   |2|1|T  |1|'A'|F|2|'A'+=1|'A'+=1|
+9   ||||||||||||
+10  |2|2|F  |
+
