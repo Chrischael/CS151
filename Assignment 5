@@ -1,0 +1,52 @@
+/****************
+ * Chrischael Jean-Louis
+ * CS 151
+ * Assignment 5/green
+ * Prof. Reid
+ * 11/28/2017
+******************/
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
+using namespace std;
+
+void GuessNumber(int &min,int &max)
+{
+  int ran;
+  int gn;
+  cout << "guess my number:\n";
+  cin >> gn;
+   while (ran<min)
+   {
+   srand(time(0));
+   ran = ((rand ()% max));
+   }
+   while (!(gn==ran))
+   {
+     cout << "Incorrect. Guess Again:\n";
+     cin >> gn;
+     if (gn==ran){
+       cout << "you got it!";
+     }
+   }
+}
+int main()
+{
+  int max,min;
+  int x,y;
+  
+  cout << "Enter 2 intigers:\n";
+ cin >> x;
+ cin >> y;
+ if (x>y)
+ {
+  max = x;
+  min = y;
+}
+  else if (y>x)
+  {
+  max = y;
+  min = x;
+  }
+  GuessNumber(min,max);
+}
