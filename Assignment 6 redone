@@ -1,0 +1,59 @@
+/*******************
+ * Chrischael Jean-Louis
+ * CS151
+ * Assignment 6 green
+ * Prof Reid
+ * 11/23/14
+*********************/
+#include<iostream>
+#include<fstream>
+#include<sstream>
+#include<cstdlib>
+#include<string>
+using namespace std;
+
+void type()
+{
+  string filename;
+  string line;
+  cin >> filename;
+  
+  ifstream file1 (filename);
+  
+  if (file1.is_open())
+  {
+    cout << "file does not exist";
+  }
+  else{
+    while ( getline (file1,line) )
+    {
+      cout << line << '\n';
+    }
+    file1.close();
+      
+  }
+
+}
+//Label Task                 goto
+//01         (start)         02
+//02  initilize filename     03
+//03       initialize line   04
+//04   cin filename          05
+//05       opening file      06
+//06       t                 07
+//07  print file does not exist 06
+//06       f                 07
+//07        t                08
+//08  print line             09
+//09     close file        
+int main()
+{
+  cout << "Enter a filename";
+  type();
+  return 0;
+}
+//Label Task                 goto
+//01          (start)        02
+//02  print Enter a filename 03
+//03  run type function      04
+//04       returns 0        
