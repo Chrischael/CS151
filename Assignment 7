@@ -1,0 +1,94 @@
+/****************
+ * Chrischael Jean-Louis63
+ * CS 151
+ * Assignment 7 green
+ * prof. Reid
+ * 12/10/17
+***************/
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
+using namespace std;
+
+void PrintArray(int data[],int size)
+{
+  for (int i = 0; i < size; i++)
+  {
+      cout << "["<< data[i]<<"],";
+  }
+//Label Task                        goto
+//01         (start)                02
+//02            i=0                 03
+//03             T                  04
+//04            i++                 05
+//05  cout << "["<< data[i]<<"],";  
+
+}
+
+bool RandomNumbers(int data[],int size,int min,int max)
+{
+    srand(time(NULL));
+  for (int i = 0; i < size; i++)
+  {
+    data[i] = rand()%(max-min+1)+min;
+  }
+  if (!(data[9] == 0))
+  return true;
+}
+//Label Task                        goto
+//01          (start)               02
+//02         time=0                 03
+//03         i=0                    04
+//04          T                     05
+//05         i++                    06
+//06    random # = data[i]          07
+//07           T                    08
+//08    returns true                
+int main()
+{
+  int n1,n2;
+  int array_size = 10;
+  int array[array_size];
+  int max, min;
+  bool result;
+  
+
+  
+  cout << "Enter two distinct numbers:";
+  cin >> n1>>n2;
+  while(n1 == n2)
+  {
+    cout << "Enter two distinct numbers:";
+    cin >> n1>>n2;
+  }
+  if (n1 > n2){
+    max = n1;
+    min = n2;
+  }
+  else{
+    max = n2;
+    min = n1;
+  }
+  result = RandomNumbers(array, array_size, min, max);
+  if (result == true)
+  {
+    PrintArray(array, array_size);
+  }
+//Label Task                             goto
+//01         (start)                     02
+//02       initialize n1,n2              03
+//03       initialize array_size         04
+//04  initialize array[array_size]       05
+//05     initialize max,min              06
+//06       initialize result             07
+//07 print Enter two distinct numbers    08
+//08     cin n1,n2                       09
+//09            t                        10
+//10 print Enter two distinct numbers    11 
+//11      cin n1,n2                      07
+//12            f                        13
+//13          t                          14
+//14        max= n2,min=n1               15
+//15 result=RandomNumbers(array, array_size, min, max) 16
+//16   run function PrintArray    
+}
