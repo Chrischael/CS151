@@ -1,0 +1,102 @@
+/**************
+ * Chrischael Jean-Louis
+ * CS 151
+ * Exam 4
+ * prof. Reid
+ * 12/9/17
+***********/
+
+//*****************************
+//SECTION 1
+//*****************************
+
+/*
+
+1.
+char array1[1][8] = {"Initial"};
+char array2[7] = {'I','n','i','t','i','a','l'};
+char array3[] = {"Initial"};
+
+*/
+
+
+/*
+
+2.
+struct Grade{
+double gpa;
+string letter;
+};
+
+*/
+
+
+
+/*
+
+3.
+*e = new double(2.71828)
+
+*/
+
+
+
+
+/*
+
+4.
+ptr = num;
+for (int i = 0;i<10;i++)
+{
+  ptr[i] = ptr[i]*2;
+}
+
+*/
+
+
+
+/*
+
+5.
+delete[] str;
+
+*/
+
+/*
+#include <iostream>
+using namespace std;
+int main(){
+cout << t[i] << "\n";
+return 0;
+}
+*/
+
+/*
+
+6.
+t = new int[15];
+for (int i = 1;i<16;i++)
+{
+t[i] = 2*i;
+}
+
+*/
+
+
+
+/*
+
+7.
+ptr = &n;
+ptr[0] = ptr[0]*4+3;
+
+*/
+
+
+/*
+
+8.
+delete ch
+ch = 0;
+
+*/
